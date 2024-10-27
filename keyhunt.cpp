@@ -310,8 +310,8 @@ int FLAGPRECALCUTED_P_FILE = 0;
 
 int bitrange;
 char *str_N;
-char *range_start = '0x8000000000000000';
-char *range_end = '0x88cccccccccccccc';
+char *range_start = 0x8000000000000000;
+char *range_end = 0x88cccccccccccccc;
 char *str_stride;
 Int stride;
 
