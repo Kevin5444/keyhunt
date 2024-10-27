@@ -268,8 +268,8 @@ uint64_t *steps = NULL;
 unsigned int *ends = NULL;
 uint64_t N = 0;
 
-uint64_t N_SEQUENTIAL_MAX = 0x100000000;
-uint64_t DEBUGCOUNT = 0x400;
+uint64_t N_SEQUENTIAL_MAX = 0x8000000000000000;
+uint64_t DEBUGCOUNT = 0x88cccccccccccccc;
 uint64_t u64range;
 
 Int OUTPUTSECONDS;
@@ -876,12 +876,12 @@ int main(int argc, char **argv)	{
 			if(N_SEQUENTIAL_MAX < 1024)	{
 				fprintf(stderr,"[I] n value need to be equal or great than 1024, back to defaults\n");
 				FLAG_N = 0;
-				N_SEQUENTIAL_MAX = 0x100000000;
+				N_SEQUENTIAL_MAX = 0x800000000000000;
 			}
 			if(N_SEQUENTIAL_MAX % 1024 != 0)	{
 				fprintf(stderr,"[I] n value need to be multiplier of  1024\n");
 				FLAG_N = 0;
-				N_SEQUENTIAL_MAX = 0x100000000;
+				N_SEQUENTIAL_MAX = 0x800000000000000;
 			}
 		}
 		printf("[+] N = %p\n",(void*)N_SEQUENTIAL_MAX);
